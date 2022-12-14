@@ -10,6 +10,10 @@ Is the ISS visible every night?
 It can only be seen when it is dawn or dusk at your location.
 As such, it can range from one sighting opportunity a month to several a week,
 since it has to be both dark where you are, and the space station has to happen to be going overhead.
+
+Possible error: (API abuse - Max retries exceeded)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.sunrise-sunset.org', port=443): Max retries exceeded with url: /json?lat=-8.76107&lng=-63.88598&formatted=0&date=today (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f52ad76bd60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
 Resources:
 
 JSON Viewer - Chrome Web Store:
@@ -25,6 +29,17 @@ International Space Station Current Location:
 http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 Location: Porto Velho Ro - Brazil
 
+Output:
+#####################################
+Local time: 5 hours
+Is not night :/
+
+iss_lat:23.6524, iss_lng:-41.0131
+my__lat:-8.76107,my__lng:-63.88598
+ISS is not overhead :/
+
+Process finished with exit code 0
+####################################
 
 Inspired in Angela Yu's ISS Project:
 https://www.udemy.com/course/100-days-of-code/
@@ -107,15 +122,13 @@ def send_email():
     user.send(to=EMAIL, subject="Look Up 👆️", contents="The ISS is above you in the sky.")
 
 is_night()
-is_iss_overhead()
-
 is_night
-
 if is_night == True:
     print("Is night :)")
 else:
     print("Is not night :/\n")
 
+is_iss_overhead()
 if is_iss_overhead == True:
     print("ISS is overhead :)")
 else:
