@@ -1,5 +1,10 @@
-# iss_tracking
+
+# iss_tracking Project:
 Python nternational Space Station (ISS) Tracking project in Python. Dez, 2022. Based on: Angela Yu 
+
+## Project Description:
+This app will email you based on the event that the International Space Station (ISS)
+is above of us in the sky, at night. 
 
 ## Can I track the ISS from my location?
 Image result for this code will track the iss in the sky, comparing to your location and time.
