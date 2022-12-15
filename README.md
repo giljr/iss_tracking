@@ -1,6 +1,7 @@
 
-# iss_tracking Project:
-Python nternational Space Station (ISS) Tracking project in Python. Dez, 2022. Based on: Angela Yu 
+# iss_tracking_project:
+Python International Space Station (ISS) Tracking project in Python. Dez, 2022. 
+Based on: Angela Yu 
 
 ## Project Description:
 This app will email you based on the event that the International Space Station (ISS)
