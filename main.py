@@ -2,8 +2,8 @@
 International Space Station (ISS) Tracking Project
 
 Project Description:
-This app will send an email you based on the event that the International Space Station (ISS)
-are above of us in the sky, at night. We make three methods to achieve this mission:
+This app will email you based on the event that the International Space Station (ISS)
+is above of us in the sky, at night. We make three methods to achieve this mission:
 
  is_night()
  is_overhead()
