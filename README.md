@@ -26,7 +26,7 @@ Location: Porto Velho Ro - Brazil
 Inspired in Angela Yu's ISS Project:
 https://www.udemy.com/course/100-days-of-code/
 
-### How-to run this app on [PyCharm 2022.3 (Community Edition)](https://www.jetbrains.com/pycharm/):
+## How-to run this app on [PyCharm 2022.3 (Community Edition)](https://www.jetbrains.com/pycharm/):
 
    0)  Open Pycharm, Clone this project by clicking Clone > VCS
        now, Git > Manage remotes... click + and paste:
