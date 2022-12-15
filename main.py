@@ -71,6 +71,9 @@ Process finished with exit code 0
 ####################################
 
 How-to run (PyCharm 2022.3 (Community Edition):
+0) Open Pycharm, Clone this project by clicking Clone > VCS
+   now, Git > Manage remotes... click + and paste:
+   url: https://github.com/giljr/iss_tracking.git
 1) Run -> Edit Configurations -> Set Project Interpreter (lasted version - mine is Python 3.10)
 2) pip install requests (Terminal)
 3) pip install yagmail (Terminal)
