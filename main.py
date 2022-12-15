@@ -48,8 +48,15 @@ How-to run (PyCharm 2022.3 (Community Edition):
 1) Run -> Edit Configurations -> Set Project Interpreter (lasted version - mine is Python 3.10)
 2) pip install requests (Terminal)
 3) pip install yagmail (Terminal)
-4) run main (Shift+F10)
+4) Go To Edit Configuration...Environment > Env. Variables
+   and add two variable:
 
+   EMAIL=<your_email>@gmail.com;
+   EMAIL_PASS=<app_password>
+
+   Sign in with App Passwords by following this tutorial:
+   (https://support.google.com/accounts/answer/185833)
+5) run main (Shift+F10)
 
 Making ISS project, I was inspired by Angela Yu , App Brewery.
 https://www.udemy.com/course/100-days-of-code/
