@@ -41,6 +41,13 @@ ISS is not overhead :/
 Process finished with exit code 0
 ####################################
 
+How-to run (PyCharm 2022.3 (Community Edition):
+1) Run -> Edit Configurations -> Set Project Interpreter (lasted version - mine is Python 3.10)
+2) pip install requests (Terminal)
+3) pip install yagmail (Terminal)
+4) run main (Shift+F10)
+
+
 Inspired in Angela Yu's ISS Project:
 https://www.udemy.com/course/100-days-of-code/
 
