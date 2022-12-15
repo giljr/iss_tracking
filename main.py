@@ -1,4 +1,4 @@
-'''
+"""
 International Space Station (ISS) Tracking Project
 
 Can I track the ISS from my location?
@@ -12,7 +12,10 @@ As such, it can range from one sighting opportunity a month to several a week,
 since it has to be both dark where you are, and the space station has to happen to be going overhead.
 
 Possible error: (API abuse - Max retries exceeded)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.sunrise-sunset.org', port=443): Max retries exceeded with url: /json?lat=-8.76107&lng=-63.88598&formatted=0&date=today (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f52ad76bd60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.sunrise-sunset.org', port=443): Max retries exceeded
+with url: /json?lat=-8.76107&lng=-63.88598&formatted=0&date=today
+(Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f52ad76bd60>:
+Failed to establish a new connection: [Err no -3] Temporary failure in name resolution'))
 
 Resources:
 
@@ -48,22 +51,18 @@ How-to run (PyCharm 2022.3 (Community Edition):
 4) run main (Shift+F10)
 
 
-Inspired in Angela Yu's ISS Project:
+Making ISS project, I was inspired by Angela Yu , App Brewery.
 https://www.udemy.com/course/100-days-of-code/
 
 @editor: j3
 Date: Dez, 2022
-'''
+"""
 
 from datetime import datetime, timedelta
 import requests
 import yagmail
 import os
 
-global is_iss_overhead
-is_iss_overhead = False
-global is_night
-is_night = False
 
 MY_LAT = -8.761070
 MY_LNG = -63.885980
@@ -78,6 +77,8 @@ EMAIL_PASS = os.environ['EMAIL_PASS']
 '''
 The ISS is visible only at night :/
 '''
+
+
 def is_night():
     parameters = {
         "lat": MY_LAT,
@@ -101,13 +102,16 @@ def is_night():
     time_now = datetime.now().hour
     print(f"Local time: {time_now} hours")
     if time_now >= local_sunset_hour or time_now <= local_sunrise_hour:
-        is_night = True
+        return True
+
 
 '''
 Spot the Station" find out if the International Space Station, 
 the third brightest object in the sky, is going to pass above your location.
 Your position is within + or - 5 degrees of the ISS position.
 '''
+
+
 def is_iss_overhead():
     response = requests.get("http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
@@ -117,29 +121,32 @@ def is_iss_overhead():
     print(f"iss_lat:{iss_lat}, iss_lng:{iss_lng}")
     print(f"my__lat:{MY_LAT},my__lng:{MY_LNG}")
     if MY_LAT - 5 <= iss_lat <= MY_LAT + 5 and MY_LNG - 5 <= iss_lng <= iss_lng + 5:
-        is_iss_overhead = True
+        return True
+
 
 '''
 Sends alerts via your email using yagmail.
 Please set environment variables in PyCharm, follow stackoverflow:
 https://stackoverflow.com/questions/42708389/how-to-set-environment-variables-in-pycharm
 '''
+
+
 def send_email():
     user = yagmail.SMTP(user=EMAIL, password=EMAIL_PASS)
     user.send(to=EMAIL, subject="Look Up 👆️", contents="The ISS is above you in the sky.")
 
-is_night()
-is_night
-if is_night == True:
+
+is_dark = is_night()
+if is_dark is True:
     print("Is night :)")
 else:
     print("Is not night :/\n")
 
-is_iss_overhead()
-if is_iss_overhead == True:
+is_over = is_iss_overhead()
+if is_over is True:
     print("ISS is overhead :)")
 else:
     print("ISS is not overhead :/ ")
 
-if is_iss_overhead is True and is_night is True:
+if is_over is True and is_dark is True:
     send_email()
