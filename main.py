@@ -1,6 +1,32 @@
 """
 International Space Station (ISS) Tracking Project
 
+Project Description:
+This app will send an email you based on the event that the International Space Station (ISS)
+are above of us in the sky, at night. We make three methods to achieve this mission:
+
+ is_night()
+ is_overhead()
+ send_email()
+
+This App will e-mail you when the ISS is overhead, and it is night in your location.
+No email otherwise :/
+
+We test this in our location (Brazil). @see Resources
+(please enter your lat and lng data to personalize the app for your need).
+
+    MY_LAT = <your_lat>
+    MY_LNG = <your_lng>
+
+Now some curiosities about ISS:
+
+Can you see the International Space Station in the night sky?
+Image result for the event that the international station are above of us in the sky, at night.
+Did you know that you can see the International Space Station ( ISS ) in the night sky as it passes
+ over your area at a distance of approximately 400 km from Earth? To the naked eye, the Space Station
+ looks like a big white dot that moves quickly across the sky without changing direction, unlike aircraft,
+ for example.
+
 Can I track the ISS from my location?
 Image result for this code will track the iss in the sky, comparing to your location and time.
 The space station can be seen from over 6,700 locations worldwide. Enter your location to find out
@@ -11,7 +37,7 @@ It can only be seen when it is dawn or dusk at your location.
 As such, it can range from one sighting opportunity a month to several a week,
 since it has to be both dark where you are, and the space station has to happen to be going overhead.
 
-Possible error: (API abuse - Max retries exceeded)
+Possible error: (Report API abuse - Max retries exceeded)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.sunrise-sunset.org', port=443): Max retries exceeded
 with url: /json?lat=-8.76107&lng=-63.88598&formatted=0&date=today
 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f52ad76bd60>:
