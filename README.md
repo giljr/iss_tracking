@@ -1,7 +1,8 @@
 
 # iss_tracking_project:
 Python International Space Station (ISS) Tracking project in Python. Dez, 2022. 
-Based on: Angela Yu 
+Based on: Angela Yu from London
+[100 Days of Code: The Complete Python Pro Bootcamp for 2023](https://www.udemy.com/course/100-days-of-code/)
 
 ## Project Description:
 This app will email you based on the event that the International Space Station (ISS)
@@ -46,8 +47,11 @@ https://www.udemy.com/course/100-days-of-code/
 
    4) Go To Edit Configuration...Environment > Env. Variables
       and add two variable:
+
       EMAIL=<your_email>@gmail.com;
+
       EMAIL_PASS=<app_password>
+
       Sign in with App Passwords by following this tutorial:
       (https://support.google.com/accounts/answer/185833)
 
