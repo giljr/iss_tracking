@@ -25,5 +25,27 @@ http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 Location: Porto Velho Ro - Brazil
 Inspired in Angela Yu's ISS Project:
 https://www.udemy.com/course/100-days-of-code/
+
+### How-to run this app on [PyCharm 2022.3 (Community Edition)](https://www.jetbrains.com/pycharm/):
+
+   0)  Open Pycharm, Clone this project by clicking Clone > VCS
+       now, Git > Manage remotes... click + and paste:
+       url: https://github.com/giljr/iss_tracking.git
+
+   1) Run -> Edit Configurations -> Set Project Interpreter (lasted version - mine is Python 3.10)
+
+   2) pip install requests (Terminal)
+
+   3) pip install yagmail (Terminal)
+
+   4) Go To Edit Configuration...Environment > Env. Variables
+      and add two variable:
+      EMAIL=<your_email>@gmail.com;
+      EMAIL_PASS=<app_password>
+      Sign in with App Passwords by following this tutorial:
+      (https://support.google.com/accounts/answer/185833)
+
+   5) run main (Shift+F10)
+
 @editor: j3
 Date: Dez, 2022
