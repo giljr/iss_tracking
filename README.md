@@ -54,6 +54,8 @@ https://www.udemy.com/course/100-days-of-code/
 
       Sign in with App Passwords by following this tutorial:
       (https://support.google.com/accounts/answer/185833)
+       
+      How to use email : https://replit.com/@jaythree/sendgmailproject?v=1
 
    5) run main (Shift+F10)
 
